@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.datnguyen.fitness.Database.WorkoutDB;
 import com.example.datnguyen.fitness.Model.Exercise;
 import com.example.datnguyen.fitness.Others.Common;
@@ -191,7 +192,8 @@ public class CardioTraining extends AppCompatActivity {
 
 
             //set data
-            ex_image.setImageResource(list.get(ex_id).getImage_id());
+          //  ex_image.setImageResource(list.get(ex_id).getImage_id());
+            Glide.with(this).load(list.get(ex_id).getImage_id()).into(ex_image);
             ex_name.setText(list.get(ex_id).getName());
         }
         else {
@@ -277,7 +279,8 @@ public class CardioTraining extends AppCompatActivity {
     };
 
     private void setExerciseInformation(int id) {
-        ex_image.setImageResource(list.get(id).getImage_id());
+  //      ex_image.setImageResource(list.get(id).getImage_id());
+        Glide.with(this).load(list.get(id).getImage_id()).into(ex_image);
         ex_name.setText(list.get(id).getName());
         btnStart.setText("Start");
 
@@ -289,8 +292,11 @@ public class CardioTraining extends AppCompatActivity {
     }
 
     private void initData() {
-        list.add(new Exercise(R.drawable.fdfdf,"Chống đẩy óc chó"));
-        list.add(new Exercise(R.drawable.img_37466,"Chống đẩy óc bò"));
+        list.add(new Exercise(R.drawable.cardio_running,"Running"));
+        list.add(new Exercise(R.drawable.cardio_jumping,"Jumping"));
+        list.add(new Exercise(R.drawable.cardio_running,"Running"));
+        list.add(new Exercise(R.drawable.cardio1,"Jumping"));
+        list.add(new Exercise(R.drawable.cardio_rope,"Rope jumping"));
 
-    }
+        }
 }

@@ -29,13 +29,16 @@ public class ListExercise extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
     private void initData() {
-        exerciseList.add(new Exercise(R.drawable.fdfdf,"Chống đẩy óc chó"));
-        exerciseList.add(new Exercise(R.drawable.img_37466,"Chống đẩy óc bò"));
-        exerciseList.add(new Exercise(R.drawable.img_314987,"Chống đẩy óc gà"));
-        exerciseList.add(new Exercise(R.drawable.sdsf,"Ngồi kiểu óc lợn"));
-        exerciseList.add(new Exercise(R.drawable.fdfdf,"Chống đẩy óc chó"));
-        exerciseList.add(new Exercise(R.drawable.img_37466,"Chống đẩy óc bò"));
-        exerciseList.add(new Exercise(R.drawable.img_314987,"Chống đẩy óc gà"));
-        exerciseList.add(new Exercise(R.drawable.sdsf,"Ngồi kiểu óc lợn"));
+        exerciseList.add(new Exercise(R.drawable.ex_barbell,"Barbell bench press"));
+        exerciseList.add(new Exercise(R.drawable.ex_dips,"Dips"));
+        exerciseList.add(new Exercise(R.drawable.ex_pushup,"Push up"));
+        exerciseList.add(new Exercise(R.drawable.ex_biceps,"Biceps"));
+        exerciseList.add(new Exercise(R.drawable.ex_deadlift,"Deadlift"));
+        exerciseList.add(new Exercise(R.drawable.ex_pullup,"Pull up"));
+        exerciseList.add(new Exercise(R.drawable.ex_bouldershoulder,"Boulder shoulders"));
+        exerciseList.add(new Exercise(R.drawable.ex_lateralshoulderraises,"Lateral shoulder raises"));
+        exerciseList.add(new Exercise(R.drawable.ex_dumbellshoulder,"Dumbell shoulders"));
+        exerciseList.add(new Exercise(R.drawable.ex_dumbelldeadlift,"Dumbell deadlift"));
+
     }
 }

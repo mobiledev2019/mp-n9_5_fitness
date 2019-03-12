@@ -89,7 +89,7 @@
             android:id="@+id/Water"
             android:layout_marginTop="20dp"
             android:layout_width="500dp"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:background="#fff"
             android:orientation="horizontal"
             android:weightSum="10">
@@ -118,17 +118,27 @@
                 android:layout_weight="6"
                 android:padding="10dp">
                 <Button
-                    android:id="@+id/btnWater"
+                    android:id="@+id/btnWaterPlus"
                     android:text="+"
                     android:textAllCaps="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"/>
-                <TextView
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/btnWaterMinus"
+                    android:text="-"
+                    android:textAllCaps="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/btnWater"
-                    android:layout_marginTop="30sp"
+                    android:layout_below="@+id/txtWaterDisplay"
+                    android:background="@drawable/buttonshape"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/txtWaterDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnWaterPlus"
                     android:text="5 glasses"
                     android:textSize="20sp"/>
 

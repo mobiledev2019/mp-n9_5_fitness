@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.datnguyen.fitness.Database.WorkoutDB;
 import com.example.datnguyen.fitness.Others.Common;
 import com.example.datnguyen.fitness.R;
@@ -88,7 +89,8 @@ public class ViewExercise extends AppCompatActivity {
             image_id = getIntent().getIntExtra("image_id",-1);
             name = getIntent().getStringExtra("name");
 
-            detail_image.setImageResource(image_id);
+          //  detail_image.setImageResource(image_id);
+            Glide.with(this).load(image_id).into(detail_image);
             title.setText(name);
 
         }

@@ -26,7 +26,6 @@
         style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"/>
     <ImageView
         android:id="@+id/detail_image"
-        android:src="@drawable/fdfdf"
         android:layout_centerInParent="true"
         android:layout_width="300dp"
         android:layout_height="200dp" />
