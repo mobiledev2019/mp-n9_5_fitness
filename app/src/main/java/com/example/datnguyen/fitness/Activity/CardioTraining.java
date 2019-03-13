@@ -26,6 +26,7 @@ public class CardioTraining extends AppCompatActivity {
     TextView txtGetReady, txtCountdown,txtTimer,ex_name;
     ProgressBar progressBar;
     LinearLayout layoutGetReady;
+    private int n;
 
     int ex_id = 0;
     WorkoutDB workoutDB;
