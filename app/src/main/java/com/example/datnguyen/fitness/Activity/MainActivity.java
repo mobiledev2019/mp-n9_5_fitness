@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.datnguyen.fitness.Fragments.ExerciseFragment;
 import com.example.datnguyen.fitness.Fragments.HomeFragment;
+import com.example.datnguyen.fitness.Fragments.ProfileFragment;
 import com.example.datnguyen.fitness.R;
 import com.example.datnguyen.fitness.Fragments.WeatherFragment;
 
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_profile:
                     toolbar.setTitle("Profile");
+                    fragment = new ProfileFragment();
+                    loadFragment(fragment);
 
                     return true;
             }

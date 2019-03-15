@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ListExercise">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/list_ex"
+    tools:context=".Activity.ListYoutubeExercise">
+    <ListView
+        android:id="@+id/lvVideo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-
+        android:layout_height="match_parent"></ListView>
 
 </LinearLayout>

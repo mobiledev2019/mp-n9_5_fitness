@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.datnguyen.fitness.Interface.ItemClickListener;
 import com.example.datnguyen.fitness.Model.Exercise;
 import com.example.datnguyen.fitness.R;
@@ -59,7 +60,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder recyclerViewHolder, final int i) {
-        recyclerViewHolder.image.setImageResource(exerciseList.get(i).getImage_id());
+       // recyclerViewHolder.image.setImageResource(exerciseList.get(i).getImage_id());
+        Glide.with(context).load(exerciseList.get(i).getImage_id()).into(recyclerViewHolder.image);
         recyclerViewHolder.text.setText(exerciseList.get(i).getName());
         recyclerViewHolder.setItemClickListener(new ItemClickListener() {
             @Override

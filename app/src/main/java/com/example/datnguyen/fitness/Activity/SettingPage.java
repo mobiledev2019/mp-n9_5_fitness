@@ -73,14 +73,16 @@ public class SettingPage extends AppCompatActivity {
             Intent intent;
             PendingIntent pendingIntent;
             intent = new Intent(SettingPage.this,AlarmNotificationReceiver.class);
-            pendingIntent = PendingIntent.getBroadcast(this,0,intent,0);
+            pendingIntent = PendingIntent.getBroadcast(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
 
             //Set alarm
             Calendar calendar = Calendar.getInstance();
-            Date toDay = Calendar.getInstance().getTime();
-            calendar.set(toDay.getYear(),toDay.getMonth(),toDay.getDay(),timePicker.getHour(),timePicker.getMinute());
+            calendar.set(Calendar.HOUR_OF_DAY,timePicker.getCurrentHour());
+            calendar.set(Calendar.MINUTE,timePicker.getCurrentMinute());
+//            Date toDay = Calendar.getInstance().getTime();
+//            calendar.set(toDay.getYear(),toDay.getMonth(),toDay.getDay(),timePicker.getHour(),timePicker.getMinute());
 
-            manager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
+            manager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
 
         }
         else {

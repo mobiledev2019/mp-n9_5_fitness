@@ -42,12 +42,13 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <Button
+                    android:padding="5dp"
                     android:id="@+id/btnStartOnline"
                     android:layout_marginTop="50dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:drawableLeft="@drawable/ic_play"
+                    android:drawableLeft="@drawable/ic_play_circle_outline_black_24dp"
                     android:text="Start"
                     android:textAllCaps="false"/>
 
@@ -89,22 +90,24 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <Button
+                    android:padding="5dp"
                     android:id="@+id/btnStartExercise"
                     android:layout_marginTop="50dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:drawableLeft="@drawable/ic_play"
+                    android:drawableLeft="@drawable/ic_play_circle_outline_black_24dp"
                     android:text="Start"
                     android:textAllCaps="false"/>
 
                 <Button
+                    android:padding="5dp"
                     android:id="@+id/btnSettingExercise"
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:drawableLeft="@drawable/ic_setting"
+                    android:drawableLeft="@drawable/ic_settings_black_24dp"
                     android:text="Setting"
                     android:textAllCaps="false"/>
 
@@ -147,16 +150,18 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <Button
+                    android:padding="5dp"
                     android:id="@+id/btnStartCardio"
                     android:layout_marginTop="50dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:drawableLeft="@drawable/ic_play"
+                    android:drawableLeft="@drawable/ic_play_circle_outline_black_24dp"
                     android:text="Start"
                     android:textAllCaps="false"/>
 
                 <Button
+                    android:padding="5dp"
                     android:id="@+id/btnCalendarCardio"
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
@@ -166,12 +171,13 @@
                     android:text="Calendar"
                     android:textAllCaps="false"/>
                 <Button
+                    android:padding="5dp"
                     android:id="@+id/btnSettingCardio"
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:drawableLeft="@drawable/ic_setting"
+                    android:drawableLeft="@drawable/ic_settings_black_24dp"
                     android:text="Setting"
                     android:textAllCaps="false"/>
 

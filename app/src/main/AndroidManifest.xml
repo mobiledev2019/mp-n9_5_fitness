@@ -3,6 +3,8 @@
     package="com.example.datnguyen.fitness">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".Others.NotificationChannel"
@@ -27,7 +29,9 @@
         <receiver android:name=".Others.AlarmNotificationReceiver" />
 
         <activity android:name=".Activity.CardioTraining" />
-        <activity android:name=".Activity.Calendar"></activity>
+        <activity android:name=".Activity.Calendar" />
+        <activity android:name=".Activity.ListYoutubeExercise" />
+        <activity android:name=".Activity.PlayYoutubeVideo"></activity>
     </application>
 
 </manifest>
