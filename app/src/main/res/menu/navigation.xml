@@ -15,9 +15,6 @@
         android:icon="@drawable/exercise_icon"
         android:title="@string/title_exercise" />
 
-    <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_person_white_24dp"
-        android:title="@string/title_profile" />
+
 
 </menu>

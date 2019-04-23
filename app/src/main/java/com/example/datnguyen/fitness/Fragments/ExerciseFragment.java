@@ -100,8 +100,8 @@ public class ExerciseFragment extends Fragment {
     public void showDiaglog(){
 
       android.app.AlertDialog.Builder alert = new android.app.AlertDialog.Builder(getContext(), R.style.MyDialogTheme);
-        alert.setTitle("Warning!!!");
-        alert.setIcon(R.drawable.ic_warning_black_24dp);
+        alert.setTitle("Internet!!!");
+        alert.setIcon(R.drawable.ic_wifi_black_24dp);
         alert.setMessage("Internet is required. Make sure that you already have Mobile Data or Wifi to access.");
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override

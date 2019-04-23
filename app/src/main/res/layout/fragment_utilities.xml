@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity"
     android:background="#dfdbdb"
-    android:id="@+id/homefragment"
     >
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +24,7 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
-                    android:text="Water"
+                    android:text="Weather"
                     android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -37,7 +33,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/water_icon"/>
+                    android:src="@drawable/umbrella_businessman"/>
             </LinearLayout>
 
             <LinearLayout
@@ -45,39 +41,16 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_marginTop="35dp"
+                <Button
+                    android:padding="5dp"
+                    android:id="@+id/btnViewWeather"
+                    android:layout_marginTop="50dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    >
-                    <Button
-                        android:id="@+id/btnWaterPlus"
-                        android:text="+"
-                        android:textAllCaps="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/buttonshape"/>
-                    <Button
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/btnWaterMinus"
-                        android:text="-"
-                        android:textAllCaps="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtWaterDisplay"
-                        android:background="@drawable/buttonshape"/>
-                    <TextView
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/txtWaterDisplay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/btnWaterPlus"
-                        android:text="5 glasses"
-                        android:textSize="20sp"/>
-
-                </RelativeLayout>
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:drawableLeft="@drawable/ic_airplay_black_24dp"
+                    android:text="View"
+                    android:textAllCaps="false"/>
 
             </LinearLayout>
 
@@ -99,7 +72,7 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
-                    android:text="Food"
+                    android:text="Note"
                     android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -108,7 +81,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/food"/>
+                    android:src="@drawable/note"/>
             </LinearLayout>
 
             <LinearLayout
@@ -118,13 +91,13 @@
                 android:orientation="vertical">
                 <Button
                     android:padding="5dp"
-                    android:id="@+id/btnAddFood"
+                    android:id="@+id/btnViewNote"
                     android:layout_marginTop="50dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:drawableLeft="@drawable/ic_add_circle_outline_black_24dp"
-                    android:text="Add"
+                    android:drawableLeft="@drawable/ic_event_note_black_24dp"
+                    android:text="View"
                     android:textAllCaps="false"/>
 
             </LinearLayout>
@@ -133,23 +106,13 @@
 
         </LinearLayout>
 
-
-       <LinearLayout
-           android:layout_marginTop="20dp"
-           android:layout_width="500dp"
-           android:layout_height="50dp"
-           android:background="#dfdbdb"></LinearLayout>
-
-
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="500dp"
+            android:layout_height="50dp"
+            android:background="#dfdbdb"></LinearLayout>
     </LinearLayout>
 
 
 
-
-
-
-
 </ScrollView>
-
-
-

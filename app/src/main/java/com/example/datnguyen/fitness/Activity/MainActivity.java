@@ -11,9 +11,8 @@ import android.view.MenuItem;
 
 import com.example.datnguyen.fitness.Fragments.ExerciseFragment;
 import com.example.datnguyen.fitness.Fragments.HomeFragment;
-import com.example.datnguyen.fitness.Fragments.ProfileFragment;
 import com.example.datnguyen.fitness.R;
-import com.example.datnguyen.fitness.Fragments.WeatherFragment;
+import com.example.datnguyen.fitness.Fragments.UtilitiesFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_weather:
                     toolbar.setTitle(R.string.title_weather);
-                    fragment = new WeatherFragment();
+                    fragment = new UtilitiesFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_exercise:
@@ -55,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new ExerciseFragment();
                     loadFragment(fragment);
                     return true;
-                case R.id.navigation_profile:
-                    toolbar.setTitle("Profile");
-                    fragment = new ProfileFragment();
-                    loadFragment(fragment);
-
-                    return true;
+//                case R.id.navigation_profile:
+//                    toolbar.setTitle("Profile");
+//                    fragment = new ProfileFragment();
+//                    loadFragment(fragment);
+//
+//                    return true;
             }
 
             return false;
