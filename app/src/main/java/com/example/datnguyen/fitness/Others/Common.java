@@ -12,6 +12,11 @@ public class Common {
     public static final String API_ID = "c0e28b1d2b515d47102ee637e8991c16";
     public static Location current_location = null;
 
+    //ForeCast
+    public static final String RAIN_V1 = "10d";
+    public static final String RAIN_V2 = "10n";
+
+
     public static String convertUnixToDate(long dt) {
         Date date = new Date(dt*1000L);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm dd EEE MM yyyy");

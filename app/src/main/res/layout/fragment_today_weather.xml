@@ -197,7 +197,50 @@
         </TableLayout>
 
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp">
+                <TextView
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Outdoor"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/imgOutdoor"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp">
+                <TextView
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Indoor"/>
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/imgIndoor"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
     <ProgressBar
         android:id="@+id/loading"

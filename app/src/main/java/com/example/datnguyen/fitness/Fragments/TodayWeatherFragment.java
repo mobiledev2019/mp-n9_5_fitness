@@ -33,14 +33,13 @@ import retrofit2.Retrofit;
  */
 public class TodayWeatherFragment extends Fragment {
     View view;
-    ImageView img_weather;
+    ImageView img_weather,img_Outdoor,img_Indoor;
     TextView  txt_city_name, txt_humidity, txt_sunrise, txt_sunset,txt_pressure, txt_temperature, txt_description,txt_date_time, txt_wind, txt_geo_coord;
     LinearLayout weather_panel;
     ProgressBar loading;
     CompositeDisposable compositeDisposable;
     IOpenWeatherMap mService;
     static TodayWeatherFragment instance;
-
 
     public TodayWeatherFragment(){
         compositeDisposable = new CompositeDisposable();
@@ -59,6 +58,8 @@ public class TodayWeatherFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_today_weather,null,false);
 
         img_weather = view.findViewById(R.id.img_weather);
+        img_Outdoor = view.findViewById(R.id.imgOutdoor);
+        img_Indoor = view.findViewById(R.id.imgIndoor);
 
         txt_city_name = view.findViewById(R.id.txt_city_name);
         txt_humidity = view.findViewById(R.id.txt_humidity);
@@ -73,6 +74,7 @@ public class TodayWeatherFragment extends Fragment {
 
         weather_panel = view.findViewById(R.id.weather_panel);
         loading = view.findViewById(R.id.loading);
+
 
         getWeatherInformation();
 
@@ -97,6 +99,8 @@ public class TodayWeatherFragment extends Fragment {
                         Picasso.with(getContext()).load(new StringBuilder("https://openweathermap.org/img/w/")
                                 .append(weatherResult.getWeather().get(0).getIcon())
                                 .append(".png").toString()).into(img_weather);
+
+                        setSuggestion(weatherResult);
                         // Get Weather Info
                         txt_city_name.setText(weatherResult.getName());
                         txt_description.setText(new StringBuilder("Weather in ")
@@ -130,6 +134,31 @@ public class TodayWeatherFragment extends Fragment {
                 })
 
         );
+    }
+
+    private void setSuggestion(WeatherResult weatherResult) {
+        // it's raining
+        if (weatherResult.getWeather().get(0).getIcon().equals(Common.RAIN_V1))
+        {
+            img_Indoor.setImageResource(R.drawable.happy_icon);
+            img_Outdoor.setImageResource(R.drawable.sad_icon);
+        }
+        else if (weatherResult.getWeather().get(0).getIcon().equals(Common.RAIN_V2))
+        {
+            img_Indoor.setImageResource(R.drawable.happy_icon);
+            img_Outdoor.setImageResource(R.drawable.sad_icon);
+        }
+        // it's hot
+        else if (weatherResult.getMain().getTemp() > 33)
+        {
+            img_Indoor.setImageResource(R.drawable.happy_icon);
+            img_Outdoor.setImageResource(R.drawable.sad_icon);
+        }
+        else {
+            img_Indoor.setImageResource(R.drawable.normal_emotion);
+            img_Outdoor.setImageResource(R.drawable.normal_emotion);
+        }
+
     }
 
     @Override
