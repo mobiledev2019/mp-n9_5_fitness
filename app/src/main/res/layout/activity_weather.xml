@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.WeatherActivity"
+    tools:context=".Activity.Weather.WeatherActivity"
     android:id="@+id/root_view">
     
     <android.support.design.widget.AppBarLayout
@@ -30,6 +30,13 @@
 
 
     </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"

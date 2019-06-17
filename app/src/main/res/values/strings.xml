@@ -2,8 +2,9 @@
     <string name="app_name">Fitness</string>
     <string name="title_home">Home</string>
     <string name="title_weather">Utilities</string>
-    <string name="title_exercise">Exercise</string>
+    <string name="title_exercise">Exercises</string>
     <string name="title_profile">Profile</string>
+    <string name="water_introduction">Good health starts with staying hydrated! Set a daily water intake target to stay on track. 1 glass is 250 ml.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Today Weather </string>

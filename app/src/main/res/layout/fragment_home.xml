@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity"
+    tools:context=".Activity.Home.MainActivity"
     android:background="#dfdbdb"
     android:id="@+id/homefragment"
     >
@@ -28,12 +28,14 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
+                    android:textColor="@color/colorPrimary"
                     android:text="Water"
                     android:textSize="24sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <ImageView
+                    android:id="@+id/imgWater"
                     android:layout_marginTop="10dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -53,6 +55,7 @@
                     android:layout_weight="6"
                     >
                     <Button
+                        android:layout_marginTop="20dp"
                         android:id="@+id/btnWaterPlus"
                         android:text="+"
                         android:textAllCaps="false"
@@ -66,16 +69,18 @@
                         android:textAllCaps="false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtWaterDisplay"
+                        android:layout_below="@+id/showWater"
                         android:background="@drawable/buttonshape"/>
+
                     <TextView
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/txtWaterDisplay"
+                        android:id="@+id/showWater"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/btnWaterPlus"
-                        android:text="5 glasses"
-                        android:textSize="20sp"/>
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="0"
+                        android:textSize="20sp" />
 
                 </RelativeLayout>
 
@@ -99,6 +104,7 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
+                    android:textColor="@color/colorPrimary"
                     android:text="Food"
                     android:textSize="24sp"
                     android:layout_width="wrap_content"
@@ -125,6 +131,17 @@
                     android:background="@drawable/buttonshape"
                     android:drawableLeft="@drawable/ic_add_circle_outline_black_24dp"
                     android:text="Add"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:padding="5dp"
+                    android:id="@+id/btnViewFood"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:drawableLeft="@drawable/ic_location_searching_black_24dp"
+                    android:text="View"
                     android:textAllCaps="false"/>
 
             </LinearLayout>

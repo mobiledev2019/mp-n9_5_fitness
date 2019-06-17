@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -60,6 +62,10 @@ public class VideoAdapter extends BaseAdapter {
         Video video = videos.get(position);
         viewHolder.txtTitle.setText(video.getTitle());
         Picasso.with(context).load(video.getThumbnail()).into(viewHolder.imgThumb);
+
+        // Animation
+        Animation animation = AnimationUtils.loadAnimation(context,R.anim.slide_left);
+        convertView.startAnimation(animation);
         return convertView;
     }
 }

@@ -24,6 +24,7 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
+                    android:textColor="@color/colorPrimary"
                     android:text="Weather"
                     android:textSize="24sp"
                     android:layout_width="wrap_content"
@@ -71,17 +72,19 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <TextView
-                    android:text="Note"
-                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimary"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="Statistics"
+                    android:textSize="24sp" />
 
                 <ImageView
                     android:layout_marginTop="10dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/note"/>
+                    android:src="@drawable/calories_icon"/>
             </LinearLayout>
 
             <LinearLayout

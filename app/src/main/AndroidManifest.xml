@@ -5,9 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".Others.NotificationChannel"
@@ -17,24 +18,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".Activity.Home.MainActivity" />
+        <activity android:name=".Activity.Weather.WeatherActivity" />
+        <activity android:name=".Activity.Exercises.ListExercise" />
+        <activity android:name=".Activity.Exercises.ViewExercise" />
+        <activity android:name=".Activity.Exercises.SettingPage" />
+
+        <receiver android:name=".Others.AlarmNotificationReceiver" />
+
+        <activity android:name=".Activity.Exercises.CardioTraining" />
+        <activity android:name=".Activity.Exercises.Calendar" />
+        <activity android:name=".Activity.Youtube.ListTheoryBasedYoutube" />
+        <activity android:name=".Activity.Youtube.PlayYoutubeVideo" />
+        <activity android:name=".Activity.Exercises.ExerciseSelection" />
+        <activity
+            android:name=".Activity.Home.SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.WeatherActivity"/>
-        <activity android:name=".Activity.ListExercise" />
-        <activity android:name=".Activity.ViewExercise" />
-        <activity android:name=".Activity.SettingPage" />
-
-        <receiver android:name=".Others.AlarmNotificationReceiver" />
-
-        <activity android:name=".Activity.CardioTraining" />
-        <activity android:name=".Activity.Calendar" />
-        <activity android:name=".Activity.ListYoutubeExercise" />
-        <activity android:name=".Activity.PlayYoutubeVideo"></activity>
+        <activity android:name=".Activity.Home.AddFood" />
+        <activity android:name=".Activity.Home.TargetWater" />
+        <activity android:name=".Activity.Statistics.Statistics" />
+        <activity android:name=".Activity.Youtube.YoutubePlaylist" />
+        <activity android:name=".Activity.Youtube.ListChestYoutube" />
+        <activity android:name=".Activity.Youtube.ListLegsYoutube" />
+        <activity android:name=".Activity.Youtube.ListArmsYoutube" />
+        <activity android:name=".Activity.Statistics.ViewStatistics" />
+        <activity android:name=".Activity.Home.ViewFood"></activity>
     </application>
 
 </manifest>

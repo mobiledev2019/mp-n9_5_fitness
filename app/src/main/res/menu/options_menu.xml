@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/move_on"
+          android:title="Move on"
+          android:icon="@drawable/moveon"
+          app:showAsAction="always"
+          android:iconTint="#ffffff"/>
+</menu>

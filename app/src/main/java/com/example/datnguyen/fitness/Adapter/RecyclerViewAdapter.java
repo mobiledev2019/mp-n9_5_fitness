@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,7 +16,7 @@ import com.bumptech.glide.Glide;
 import com.example.datnguyen.fitness.Interface.ItemClickListener;
 import com.example.datnguyen.fitness.Model.Exercise;
 import com.example.datnguyen.fitness.R;
-import com.example.datnguyen.fitness.Activity.ViewExercise;
+import com.example.datnguyen.fitness.Activity.Exercises.ViewExercise;
 
 import java.util.List;
 
@@ -23,6 +25,7 @@ class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClick
     public ImageView image;
     public TextView text;
     private ItemClickListener itemClickListener;
+
 
     public RecyclerViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -44,7 +47,7 @@ class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClick
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder>{
     private List<Exercise> exerciseList;
     private Context context;
-
+    private int lastPosition = -1;
     public RecyclerViewAdapter(List<Exercise> exerciseList, Context context) {
         this.exerciseList = exerciseList;
         this.context = context;
@@ -73,6 +76,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
                 context.startActivity(intent);
             }
         });
+
+        setAnimation(recyclerViewHolder.itemView, i);
+    }
+
+    private void setAnimation(View itemView, int i) {
+        if (i > lastPosition )
+        {
+            Animation animation = AnimationUtils.loadAnimation(context,R.anim.slide_left);
+            itemView.startAnimation(animation);
+            lastPosition = i;
+        }
     }
 
     @Override

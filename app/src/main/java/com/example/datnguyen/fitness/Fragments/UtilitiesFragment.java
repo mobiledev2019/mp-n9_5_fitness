@@ -14,14 +14,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.datnguyen.fitness.Activity.ListYoutubeExercise;
-import com.example.datnguyen.fitness.Activity.WeatherActivity;
+import com.example.datnguyen.fitness.Activity.Statistics.Statistics;
+import com.example.datnguyen.fitness.Activity.Weather.WeatherActivity;
 import com.example.datnguyen.fitness.R;
 
 public class UtilitiesFragment extends Fragment {
-    private Button btnViewWeather,btnViewNote;
+    private Button btnViewWeather,btnViewStatistics;
     public View view;
 
     @Nullable
@@ -39,16 +38,18 @@ public class UtilitiesFragment extends Fragment {
                 else {
                     Intent intent = new Intent(getContext(),WeatherActivity.class);
                     startActivity(intent);
+
                 }
 
             }
         });
 
 
-        btnViewNote.setOnClickListener(new View.OnClickListener() {
+        btnViewStatistics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Toast ??", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(),Statistics.class));
+
             }
         });
 
@@ -59,7 +60,7 @@ public class UtilitiesFragment extends Fragment {
 
         btnViewWeather = view.findViewById(R.id.btnViewWeather);
 
-        btnViewNote = view.findViewById(R.id.btnViewNote);
+        btnViewStatistics = view.findViewById(R.id.btnViewNote);
 
     }
 

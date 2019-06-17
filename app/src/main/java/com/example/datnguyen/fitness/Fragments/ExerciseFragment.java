@@ -8,19 +8,18 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.datnguyen.fitness.Activity.Calendar;
-import com.example.datnguyen.fitness.Activity.CardioTraining;
-import com.example.datnguyen.fitness.Activity.ListExercise;
-import com.example.datnguyen.fitness.Activity.ListYoutubeExercise;
+import com.example.datnguyen.fitness.Activity.Exercises.Calendar;
+import com.example.datnguyen.fitness.Activity.Exercises.CardioTraining;
+import com.example.datnguyen.fitness.Activity.Exercises.ExerciseSelection;
+import com.example.datnguyen.fitness.Activity.Youtube.YoutubePlaylist;
 import com.example.datnguyen.fitness.R;
-import com.example.datnguyen.fitness.Activity.SettingPage;
+import com.example.datnguyen.fitness.Activity.Exercises.SettingPage;
 
 public class ExerciseFragment extends Fragment {
     private Button btnStartOnline, btnStartExercise, btnStartCardio;
@@ -51,7 +50,7 @@ public class ExerciseFragment extends Fragment {
          btnStartExercise.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 Intent intent = new Intent(getContext(),ListExercise.class);
+                 Intent intent = new Intent(getContext(),ExerciseSelection.class);
                  startActivity(intent);
              }
          });
@@ -109,7 +108,7 @@ public class ExerciseFragment extends Fragment {
                 // Check if internet is connected
                 if (isNetworkConnected())
                 {
-                    Intent intent = new Intent(getContext(),ListYoutubeExercise.class);
+                    Intent intent = new Intent(getContext(),YoutubePlaylist.class);
                     startActivity(intent);
                 }
                 else {
